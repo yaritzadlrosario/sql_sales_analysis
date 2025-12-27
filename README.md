@@ -1,16 +1,16 @@
 # 📊 Retail Sales Analysis - SQL Project
 
-## 📌 Project Overview
+## Project Overview
 This project demonstrates a comprehensive data analysis of a retail dataset using **MySQL**. The goal was to transform raw sales data into actionable insights, focusing on customer demographics, sales trends, and product performance.
 
 The project involves **Data Cleaning**, **Data Transformation**, and **Exploratory Data Analysis (EDA)** to answer critical business questions.
 
-## 🛠️ Technology Stack
+## Technology Stack
 * **Database:** MySQL
 * **Tool:** MySQL Workbench
 * **Language:** SQL (DDL, DML, DQL)
 
-## 📂 Data Structure
+## Data Structure
 The dataset (`sales_analysis_utf`) contains transaction records with the following key attributes:
 * `transactions_id`: Unique identifier for each sale.
 * `sale_date`: Date of the transaction.
@@ -24,14 +24,14 @@ The dataset (`sales_analysis_utf`) contains transaction records with the followi
 * `cogs`: Cost of Goods Sold.
 * `total_sale`: Total revenue generated from the transaction.
 
-## 🧹 Data Cleaning & Preparation
+## Data Cleaning & Preparation
 Before analysis, the raw data required significant cleaning and formatting to ensure accuracy.
 1.  **Header Repair:** Fixed the "Byte Order Mark" (BOM) artifact (`ï»¿`) in the `transactions_id` column.
 2.  **Date Formatting:** The `sale_date` was imported as text (e.g., `11/5/2022`). I used `STR_TO_DATE()` to convert it to MySQL's standard `YYYY-MM-DD` format and updated the column data type to `DATE`.
 3.  **Time Formatting:** Converted `sale_time` to the `TIME` data type.
 4.  **Column Corrections:** Fixed a typo in the column name `quantiy` → `quantity` and ensured all numeric columns (Integer/Decimal) were strictly typed for calculation.
 
-## 🔍 Key Analysis & Insights
+## Key Analysis & Insights
 The following business questions were solved using SQL queries:
 
 ### 1. Sales Performance Analysis
@@ -49,7 +49,7 @@ The following business questions were solved using SQL queries:
 * **Sales Filtering:** Retrieved transactions for specific dates and ranges (e.g., November 2022).
 * **Shift Analysis:** Created a dynamic categorization of sales into **Morning**, **Afternoon**, and **Evening** shifts using SQL `CASE` statements to identify peak trading hours.
 
-## 💡 Example Code Snippet
+## Example Code Snippet
 *Categorizing transactions into shifts using `CASE`:*
 ```sql
 SELECT 
