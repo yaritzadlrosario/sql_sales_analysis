@@ -1,4 +1,3 @@
-# sql_sales_analysis
 # 📊 Retail Sales Analysis - SQL Project
 
 ## 📌 Project Overview
